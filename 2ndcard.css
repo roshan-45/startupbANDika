@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400&family=Nunito:ital,wght@1,400&display=swap');
+
+/* font-family: 'Josefin Sans', sans-serif; */
+/* font-family: 'Nunito', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+list-style: none;
+}
+
+.container{
+    height: 100%;
+    width: 96%;
+    margin: 1% 2%;
+}
+
+header{
+    display: flex;
+    padding: .5% 0%;
+    justify-content: space-between;
+}
+
+header h1{
+    margin: 0 .5%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #A379C9;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+header div.slash{
+    font-size: 6em;
+    text-decoration-thickness: 2px;
+    transform: rotate(10deg);
+}
+
+header nav{
+    margin: 0 .5%;
+    width: 60%;
+}
+
+
+header nav ul {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: 100%;
+    transition-duration: 0.4s;  
+}
+
+header nav ul a{
+    text-decoration: none;
+    color:#000000
+}
+
+header nav ul li:hover{
+    font-size: 18px;
+}
+
+.but{
+    display: flex;
+    height: 100px;
+    margin-top: 2%;
+    padding: .5% 0%;
+    justify-content: space-around; 
+}
+
+.but li button{
+    font-family: Josefin Sans;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+  }
+
+.but li button:hover {
+    background-color: #f0f0f0;
+}
+
+section{
+    text-align: center;
+    align-content: center;
+    background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?t=st=1649927286~exp=1649927886~hmac=8926d17201e9a51485c191eaa89d5f2febccf40aee90b0e3194d95726d0ba882&w=1380");
+    padding: 0%;
+}
+
+
+section h1{
+    padding: 35px;
+    padding-bottom: 90px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #f0f0f0;
+    font-size: 35px;
+}
+
+section li ul{
+    padding-bottom: 90px;
+    color: white;
+    font-size: 20px;
+}
+
+section li ul:hover{
+    image-orientation: from-image;
+    opacity: 0.75;
+}

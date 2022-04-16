@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400&family=Nunito:ital,wght@1,400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+list-style: none;
+}
+
+.container{
+    height: 100%;
+    width: 96%;
+    margin: 1% 2%;
+}
+
+header{
+    display: flex;
+    padding: .5% 0%;
+    justify-content: space-between;
+}
+
+header h1{
+    margin: 0 .5%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #A379C9;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+header div.slash{
+    font-size: 6em;
+    text-decoration-thickness: 2px;
+    transform: rotate(10deg);
+}
+
+header nav{
+    margin: 0 .5%;
+    width: 60%;
+
+}
+
+
+header nav ul {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: 100%;
+    transition-duration: 0.4s;  
+}
+
+header nav ul a{
+    text-decoration: none;
+    color:#000000
+}
+
+header nav ul li:hover{
+    font-size: 18px;
+}
+
+.cards{
+    display:flex;
+    justify-content: center;
+}
+
+.card1{
+    position: absolute;
+    width: 340px;
+    height: 280px;
+    left: 275px;
+    top: 200px;
+    padding-top: 40px;
+
+    background: #d5b9ee;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25), -4px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius:0%;
+}
+
+.cards h2{
+    text-align: center;
+    line-height: 40px;
+    font-family: Josefin Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 150;
+}
+
+.cards h1{
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 28px;
+    font-size: 28px;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+.cards ul li:before{
+    content:'‣';
+}
+
+.cards button{
+    position: absolute;
+    width: 283px;
+    height: 45px;
+    left: 25px;
+    top: 205px;
+
+    font-family: Nunito;
+    font-style: normal;
+    text-align: center;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 41px;
+    border-radius: 0%;
+    border:transparent;
+
+    background-color: #A379C9;
+    color: white;
+}
+
+.card2{
+    position: absolute;
+    width: 340px;
+    height: 280px;
+    left: 850px;
+    top: 200px;
+    padding-top: 40px;
+
+    background: #d5b9ee;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25), -4px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius:0%;
+}
+
+.card3{
+    position: absolute;
+    width: 340px;
+    height: 280px;
+    left: 275px;
+    top: 600px;
+    padding-top: 40px;
+
+    background: #d5b9ee;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25), -4px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius:0%;
+}
+
+.card4{
+    position: absolute;
+    width: 340px;
+    height: 280px;
+    left: 850px;
+    top: 600px;
+    padding-top: 40px;
+    background: #d5b9ee;
+    background-position: contain;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25), -4px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius:0%;
+    /* background-image: 'https://lh3.googleusercontent.com/qj1b638r21hpG8v6qQsKpxSF9DwolaxoaMViIR9A5llU4U1zTZRQzb0jpEpc_Cc9Le8vcDE-xuW652dhjuK3WJZeUOQiEV5C9q2vWlu3QsFsxXgxOtNiONGXfFxaaO0_5m1IyUKotQ=w2400'; */
+}
+
+
+.card4 img{
+    width: 350px;
+    position:relative;
+    bottom:40px;
+}
+
+.card4 h1,.card4 h2,.card4 ul{
+    position:relative;
+    bottom:350px;
+}
+
+.cards ul{
+    padding-left: 25px;
+}
+
+.cards button:hover{
+    font-size: 22px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25), -4px 0px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cards ul li{
+    list-style-type:none;
+    text-align:left;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height:19px;
+
+    color: #2E4057;
+}
+
+.footer{
+    margin-top: 900px;
+    width: 2000px;
+    height: 250px;
+    background-color: rgb(151, 149, 149);
+    color: white;
+    text-align: center; 
+    font-size: 13px;
+}
+
+
+    
+
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="investorlist.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4277ee6e5.js" crossorigin="anonymous"></script>
+    <title>Startup Bandika</title>
+</head>
+<body>
+    <div class="container">
+          <header>
+              <h1><b>Startup bANDika</b></h1>
+              <div class="slash">/</div>
+              <nav>
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="subscribe.html"><li>Subscribe</li></a>
+                    <a href="contact_us.html"><li>Contact us</li></a>
+                    <a href="login.html"><li>Login</li></a>
+                </ul>
+              </nav>
+
+          </header>
+          <!-- ----------------------------Header ends--------------------------- -->
+
+          <div class="wrapper">
+            <div class="search-input">
+              <a href="" target="_blank" hidden></a>
+              <form class="nosubmit">
+                 <input class="nosubmit" type="search" placeholder="Search investors name....." >
+              </form>
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              </div>
+              <!-- <div class="icon"></div> -->
+            </div>
+          </div>
+           <script>
+               let suggestions = [
+                "Rakshith",
+                "Suraj",
+                "Sushanth",
+                "Shanshank",
+                "Sanskar",
+                "Sudhesh",
+                "Sai Ganesh",
+                "Rithesh",
+                "Varun",
+                ];
+
+            const searchWrapper = document.querySelector(".search-input");
+            const inputBox = searchWrapper.querySelector("input");
+            const suggBox = searchWrapper.querySelector(".autocom-box");
+            const icon = searchWrapper.querySelector(".icon");
+            let linkTag = searchWrapper.querySelector("a");
+            let webLink;
+
+            // icon.addEventListener('Click',()=>{
+            //     inputBox.value = "";
+            // })
+
+            // if user press any key and release
+            inputBox.onkeyup = (e)=>{
+                let userData = e.target.value; //user enetered data
+                let emptyArray = [];
+
+                if(userData){
+                    emptyArray = suggestions.filter((data)=>{
+                        //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+                        return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+                    });
+                    emptyArray = emptyArray.map((data)=>{
+                        // passing return data inside li tag
+                        return data = `<li>${data}</li>`;
+                    });
+                    searchWrapper.classList.add("active"); //show autocomplete box
+                    showSuggestions(emptyArray);
+                    let allList = suggBox.querySelectorAll("li");
+                    for (let i = 0; i < allList.length; i++) {
+                        //adding onclick attribute in all li tag
+                        allList[i].setAttribute("onclick", "select(this)");
+                        
+                    const cancel = document.getElementsByClassName('nosubmit')[0];
+                    icon.onclick = ()=>{
+                    cancel.value = "Search investors name...";
+                    }
+                    }
+                }else{
+                    searchWrapper.classList.remove("active"); //hide autocomplete box
+                }
+            }
+            function select(element){
+                let selectData = element.textContent;
+                inputBox.value = selectData;
+                icon.onclick = ()=>{
+                    webLink = `https://www.google.com/search?q=${selectData}`;
+                    linkTag.setAttribute("href", webLink);
+                    linkTag.click();
+                }
+                searchWrapper.classList.remove("active");
+            }
+            function showSuggestions(list){
+                let listData;
+                if(!list.length){
+                    userValue = inputBox.value;
+                    listData = `<li>${userValue}</li>`;
+                }else{
+                listData = list.join('');
+                }
+                suggBox.innerHTML = listData;
+            }
+
+           </script> 
+
+           <h6>Some popular investors based on your activities...</h6>
+
+           <div class="card">
+
+            <div class="card1">
+            <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?t=st=1649830083~exp=1649830683~hmac=258b2e47a0bfc7095db70901e843d7a10a977f79039d505178c1d3695340f11f&w=740" height="280px" width="220px" alt="John" style="width:100%">
+            <h1>Aman Gupta</h1>
+            <p class="title">CEO & Founder of Boat</p>
+            <p>Certified Public Accountant</p>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <p><button>Contact</button></p>
+            </div>
+
+            <div class="card2">
+                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?t=st=1649830083~exp=1649830683~hmac=258b2e47a0bfc7095db70901e843d7a10a977f79039d505178c1d3695340f11f&w=740" height="280px" width="220px" alt="John" style="width:100%">
+                <h1>Namitha Thapper</h1>
+                <p class="title">Emcure Pharmaceutical</p>
+                <p>Post Graduate</p>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <p><button>Contact</button></p>
+            </div>
+
+            <div class="card3">
+                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?t=st=1649830083~exp=1649830683~hmac=258b2e47a0bfc7095db70901e843d7a10a977f79039d505178c1d3695340f11f&w=740" height="280px" width="220px" alt="John" style="width:100%">
+                <h1>Peyush Bansal</h1>
+                <p class="title">CEO & Founder of Lenskart</p>
+                <p>Post Graduate</p>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <p><button>Contact</button></p>
+            </div>
+    
+    
+
+        </div>
+           
+
+
+        
+
+
+   
